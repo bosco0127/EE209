@@ -1,0 +1,57 @@
+ 20200029 공현덕
+ I do this homework with myself basically, and I only asked a question to TA,
+Joontaek Oh, about idivl operator once.
+ I spent about 16 hours to complete this assignment. On day 1, I did not solve
+segementation fault for 4 hours so I delete all the works and start at the
+beginning. On day 2, I could complete part a within 4 hours but have a problem
+at idivl command. On day 3, I spent about 2 hours to solve idivl command and
+spent 2 hours to finish part b.
+ This homework was good to understand the grammar of Assembly language for me.
+At first, I did not know the grammar exactly and spent a lot of time because of
+that reason. But now, I understood how to assign value or address to the register,
+and how to handle it appropriately.
+ While I doing this homework, I could find the bug which divide operator idivl
+has. At first, I did not initialized EDX register right before the idvil command,
+and the divide result was always Floating point exception. According to my search
+result, it happens when it is going to divide some value by zero, but my case was
+not correspond to this case. I was curious about this situation and asked it to
+the TA, and he gave me the answer like this:
+	
+	EDX register stores the remainder of the result, and if
+	the value stored in EDX is larger than numerator, it is
+	treated as an error. Thus, you need to initialize EDX
+	register with 0.
+
+Also, I could get correct answers in most of the cases, however, I got a question
+about this:
+
+	What if the numerator which is stored in EAX register has
+	negative value so that it is smaller than EDX register?
+	What happens if the numerator is negative value?
+
+So I test several cases and get following results:
+
+	(negative value) / 1 = Floating point exception
+	-1 / 2 = 2147483647 (2^31 - 1)
+	-2 / 2 = 2147483647 (2^31 - 1)
+	-3 / 2 = 2147483646 (2^31 - 2)
+	-3 / 3 = 1431655764
+	-100 / 20 = 214748359
+	
+	(negative value) / -1 = Floating point exception
+	-1 / -2 = -2147483647 (-2^31 + 1)
+	-2 / -2 = -2147483647 (-2^31 + 1)
+	-3 / -2 = -2147483646 (-2^31 + 2)
+	-4 / -2 = -2147483646 (-2^31 + 2)
+	-5 / -2 = -2147483646 (-2^31 + 3)
+	-100 / 20 = -214748359
+
+I could not find why these results happens, but I could assure that there is a
+problem in the idivl command.
+And later, I could fix this problem like following way:
+
+	when we want to calculate b / a and if b is negative,
+	change both of their sign and do calculation.
+->	b / a == (-b) / (-a).
+
+I attached 'testnegdiv.txt' in the .tar.gz file.

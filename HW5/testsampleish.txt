@@ -1,0 +1,447 @@
+% o "*** EXECUTABLE BINARY COMMANDS"
+% date
+Fri Jun 18 22:19:27 KST 2021
+% /bin/date
+Fri Jun 18 22:19:27 KST 2021
+% pwd
+/mnt/home/20200029
+% ls
+20200029_assign1
+20200029_assign1.tar.gz
+20200029_assign2
+20200029_assign2.tar.gz
+EE485_final
+examples.desktop
+final
+glibc
+HW2
+HW3
+HW5
+test
+test.c
+week1
+% ls -al
+total 240
+drwx------  17 20200029 20200029  4096 Jun 18 22:13 .
+drwxr-xr-x 370 root     root     12288 Jun 18 20:47 ..
+drwxrwxr-x   2 20200029 20200029  4096 Mar 28 23:01 20200029_assign1
+-rw-rw-r--   1 20200029 20200029 51019 Mar 28 23:02 20200029_assign1.tar.gz
+drwxrwxr-x   2 20200029 20200029  4096 Apr 16 18:40 20200029_assign2
+-rw-rw-r--   1 20200029 20200029  4639 Apr 16 18:57 20200029_assign2.tar.gz
+-rw-------   1 20200029 20200029 27809 Jun 12 02:07 .bash_history
+-rw-------   1 20200029 20200029   220 Mar  5 11:45 .bash_logout
+-rw-------   1 20200029 20200029  3890 Mar  5 11:45 .bashrc
+drwx------   2 20200029 20200029  4096 Mar  5 11:45 .cache
+drwxr-xr-x   6 20200029 20200029  4096 Mar  6 17:07 .config
+drwxrwxr-x   3 20200029 20200029  4096 Jun 11 20:29 EE485_final
+-rw-rw-r--   1 20200029 20200029   515 Apr 12 19:31 .emacs
+drwx------   3 20200029 20200029  4096 Mar  6 17:03 .emacs.d
+-rw-------   1 20200029 20200029  8980 Mar  5 11:45 examples.desktop
+drwxrwxr-x   2 20200029 20200029  4096 Jun 12 02:06 final
+drwxrwxr-x  69 20200029 20200029  4096 Jun 11 22:07 glibc
+drwxrwxr-x   2 20200029 20200029  4096 Apr 16 18:44 HW2
+drwxrwxr-x   2 20200029 20200029  4096 May  3 00:23 HW3
+drwxrwxrwx   2 20200029 20200029  4096 Jun 18 22:19 HW5
+-rw-rw-r--   1 20200029 20200029   721 Jun 18 22:13 .ishrc
+drwxr-xr-x   3 20200029 20200029  4096 Mar  6 17:07 .local
+drwxrwxr-x   2 20200029 20200029  4096 Jun 11 20:20 .nano
+-rw-------   1 20200029 20200029   675 Mar  5 11:45 .profile
+drwx------   2 20200029 20200029  4096 Mar 12 02:34 .ssh
+-rwxrwxr-x   1 20200029 20200029  8600 Jun 11 20:05 test
+-rw-rw-r--   1 20200029 20200029   167 Jun 11 19:04 test.c
+-rw-------   1 20200029 20200029 11734 Jun 18 22:13 .viminfo
+-rw-rw-r--   1 20200029 20200029    48 Jun 11 21:26 .vimrc
+drwxrwxr-x   2 20200029 20200029  4096 Mar 28 00:56 week1
+-rw-------   1 20200029 20200029   468 Jun 18 22:06 .Xauthority
+-rw-------   1 20200029 20200029    13 Mar  5 11:45 .xinputrc
+% echo
+
+% echo one two three
+one two three
+% echo one "two   three" four
+one two   three four
+% echo "|"
+|
+% printenv
+LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+LD_LIBRARY_PATH=/usr/local/cuda/lib64:/usr/local/cuda/extras/CUPTI/lib64
+LC_MEASUREMENT=en_US.UTF-8
+SSH_CONNECTION=172.25.0.221 50160 143.248.154.132 22
+LESSCLOSE=/usr/bin/lesspipe %s %s
+LC_PAPER=en_US.UTF-8
+LC_MONETARY=en_US.UTF-8
+LANG=en_US.UTF-8
+DISPLAY=localhost:13.0
+JAVA_HOME=/usr/lib/jvm/java-8-oracle
+J2SDKDIR=/usr/lib/jvm/java-8-oracle
+S_COLORS=auto
+LC_NAME=en_US.UTF-8
+XDG_SESSION_ID=37485
+DERBY_HOME=/usr/lib/jvm/java-8-oracle/db
+USER=20200029
+QT_QPA_PLATFORMTHEME=appmenu-qt5
+PWD=/mnt/home/20200029/HW5
+HOME=/mnt/home/20200029
+J2REDIR=/usr/lib/jvm/java-8-oracle/jre
+SSH_CLIENT=172.25.0.221 50160 22
+CUDA_HOME=/usr/local/cuda
+XDG_DATA_DIRS=/usr/local/share:/usr/share:/var/lib/snapd/desktop
+LC_ADDRESS=en_US.UTF-8
+LC_NUMERIC=en_US.UTF-8
+SSH_TTY=/dev/pts/87
+MAIL=/var/mail/20200029
+TERM=xterm
+SHELL=/bin/bash
+SHLVL=1
+LANGUAGE=en
+LC_TELEPHONE=en_US.UTF-8
+LOGNAME=20200029
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/20200029/bus
+XDG_RUNTIME_DIR=/run/user/20200029
+PATH=/usr/local/cuda/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/local/cuda/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin:/opt/anaconda/bin
+LC_IDENTIFICATION=en_US.UTF-8
+LESSOPEN=| /usr/bin/lesspipe %s
+LC_TIME=en_US.UTF-8
+OLDPWD=/mnt/home/20200029
+_=./sampleish
+% 
+% echo "*** SHELL BUILTIN COMMANDS (cd, setenv, unsetenv)"
+*** SHELL BUILTIN COMMANDS (cd, setenv, unsetenv)
+% cd /usr
+% pwd
+/usr
+% cd bin
+% pwd
+/usr/bin
+% cd
+% pwd
+/mnt/home/20200029
+% setenv XXX 123
+% printenv
+LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+LD_LIBRARY_PATH=/usr/local/cuda/lib64:/usr/local/cuda/extras/CUPTI/lib64
+LC_MEASUREMENT=en_US.UTF-8
+SSH_CONNECTION=172.25.0.221 50160 143.248.154.132 22
+LESSCLOSE=/usr/bin/lesspipe %s %s
+LC_PAPER=en_US.UTF-8
+LC_MONETARY=en_US.UTF-8
+LANG=en_US.UTF-8
+DISPLAY=localhost:13.0
+JAVA_HOME=/usr/lib/jvm/java-8-oracle
+J2SDKDIR=/usr/lib/jvm/java-8-oracle
+S_COLORS=auto
+LC_NAME=en_US.UTF-8
+XDG_SESSION_ID=37485
+DERBY_HOME=/usr/lib/jvm/java-8-oracle/db
+USER=20200029
+QT_QPA_PLATFORMTHEME=appmenu-qt5
+PWD=/mnt/home/20200029/HW5
+HOME=/mnt/home/20200029
+J2REDIR=/usr/lib/jvm/java-8-oracle/jre
+SSH_CLIENT=172.25.0.221 50160 22
+CUDA_HOME=/usr/local/cuda
+XDG_DATA_DIRS=/usr/local/share:/usr/share:/var/lib/snapd/desktop
+LC_ADDRESS=en_US.UTF-8
+LC_NUMERIC=en_US.UTF-8
+SSH_TTY=/dev/pts/87
+MAIL=/var/mail/20200029
+TERM=xterm
+SHELL=/bin/bash
+SHLVL=1
+LANGUAGE=en
+LC_TELEPHONE=en_US.UTF-8
+LOGNAME=20200029
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/20200029/bus
+XDG_RUNTIME_DIR=/run/user/20200029
+PATH=/usr/local/cuda/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/local/cuda/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin:/opt/anaconda/bin
+LC_IDENTIFICATION=en_US.UTF-8
+LESSOPEN=| /usr/bin/lesspipe %s
+LC_TIME=en_US.UTF-8
+OLDPWD=/mnt/home/20200029
+_=./sampleish
+XXX=123
+% unsetenv XXX
+% printenv
+LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+LD_LIBRARY_PATH=/usr/local/cuda/lib64:/usr/local/cuda/extras/CUPTI/lib64
+LC_MEASUREMENT=en_US.UTF-8
+SSH_CONNECTION=172.25.0.221 50160 143.248.154.132 22
+LESSCLOSE=/usr/bin/lesspipe %s %s
+LC_PAPER=en_US.UTF-8
+LC_MONETARY=en_US.UTF-8
+LANG=en_US.UTF-8
+DISPLAY=localhost:13.0
+JAVA_HOME=/usr/lib/jvm/java-8-oracle
+J2SDKDIR=/usr/lib/jvm/java-8-oracle
+S_COLORS=auto
+LC_NAME=en_US.UTF-8
+XDG_SESSION_ID=37485
+DERBY_HOME=/usr/lib/jvm/java-8-oracle/db
+USER=20200029
+QT_QPA_PLATFORMTHEME=appmenu-qt5
+PWD=/mnt/home/20200029/HW5
+HOME=/mnt/home/20200029
+J2REDIR=/usr/lib/jvm/java-8-oracle/jre
+SSH_CLIENT=172.25.0.221 50160 22
+CUDA_HOME=/usr/local/cuda
+XDG_DATA_DIRS=/usr/local/share:/usr/share:/var/lib/snapd/desktop
+LC_ADDRESS=en_US.UTF-8
+LC_NUMERIC=en_US.UTF-8
+SSH_TTY=/dev/pts/87
+MAIL=/var/mail/20200029
+TERM=xterm
+SHELL=/bin/bash
+SHLVL=1
+LANGUAGE=en
+LC_TELEPHONE=en_US.UTF-8
+LOGNAME=20200029
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/20200029/bus
+XDG_RUNTIME_DIR=/run/user/20200029
+PATH=/usr/local/cuda/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/local/cuda/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin:/opt/anaconda/bin
+LC_IDENTIFICATION=en_US.UTF-8
+LESSOPEN=| /usr/bin/lesspipe %s
+LC_TIME=en_US.UTF-8
+OLDPWD=/mnt/home/20200029
+_=./sampleish
+% 
+% echo "*** PIPE"
+*** PIPE
+% ls -al | grep drw
+drwx------  17 20200029 20200029  4096 Jun 18 22:13 .
+drwxr-xr-x 370 root     root     12288 Jun 18 20:47 ..
+drwxrwxr-x   2 20200029 20200029  4096 Mar 28 23:01 20200029_assign1
+drwxrwxr-x   2 20200029 20200029  4096 Apr 16 18:40 20200029_assign2
+drwx------   2 20200029 20200029  4096 Mar  5 11:45 .cache
+drwxr-xr-x   6 20200029 20200029  4096 Mar  6 17:07 .config
+drwxrwxr-x   3 20200029 20200029  4096 Jun 11 20:29 EE485_final
+drwx------   3 20200029 20200029  4096 Mar  6 17:03 .emacs.d
+drwxrwxr-x   2 20200029 20200029  4096 Jun 12 02:06 final
+drwxrwxr-x  69 20200029 20200029  4096 Jun 11 22:07 glibc
+drwxrwxr-x   2 20200029 20200029  4096 Apr 16 18:44 HW2
+drwxrwxr-x   2 20200029 20200029  4096 May  3 00:23 HW3
+drwxrwxrwx   2 20200029 20200029  4096 Jun 18 22:19 HW5
+drwxr-xr-x   3 20200029 20200029  4096 Mar  6 17:07 .local
+drwxrwxr-x   2 20200029 20200029  4096 Jun 11 20:20 .nano
+drwx------   2 20200029 20200029  4096 Mar 12 02:34 .ssh
+drwxrwxr-x   2 20200029 20200029  4096 Mar 28 00:56 week1
+% ls -al|grep rwx
+drwx------  17 20200029 20200029  4096 Jun 18 22:13 .
+drwxr-xr-x 370 root     root     12288 Jun 18 20:47 ..
+drwxrwxr-x   2 20200029 20200029  4096 Mar 28 23:01 20200029_assign1
+drwxrwxr-x   2 20200029 20200029  4096 Apr 16 18:40 20200029_assign2
+drwx------   2 20200029 20200029  4096 Mar  5 11:45 .cache
+drwxr-xr-x   6 20200029 20200029  4096 Mar  6 17:07 .config
+drwxrwxr-x   3 20200029 20200029  4096 Jun 11 20:29 EE485_final
+drwx------   3 20200029 20200029  4096 Mar  6 17:03 .emacs.d
+drwxrwxr-x   2 20200029 20200029  4096 Jun 12 02:06 final
+drwxrwxr-x  69 20200029 20200029  4096 Jun 11 22:07 glibc
+drwxrwxr-x   2 20200029 20200029  4096 Apr 16 18:44 HW2
+drwxrwxr-x   2 20200029 20200029  4096 May  3 00:23 HW3
+drwxrwxrwx   2 20200029 20200029  4096 Jun 18 22:19 HW5
+drwxr-xr-x   3 20200029 20200029  4096 Mar  6 17:07 .local
+drwxrwxr-x   2 20200029 20200029  4096 Jun 11 20:20 .nano
+drwx------   2 20200029 20200029  4096 Mar 12 02:34 .ssh
+-rwxrwxr-x   1 20200029 20200029  8600 Jun 11 20:05 test
+drwxrwxr-x   2 20200029 20200029  4096 Mar 28 00:56 week1
+% ps -A | grep sshd | sed -e '1,10d'
+ 2520 ?        00:00:00 sshd
+ 2634 ?        00:00:00 sshd
+ 2764 ?        00:00:00 sshd
+ 2832 ?        00:00:00 sshd
+ 2859 ?        00:00:00 sshd
+ 2914 ?        00:00:20 sshd
+ 2989 ?        00:00:00 sshd
+ 3106 ?        00:00:00 sshd
+ 3211 ?        00:00:00 sshd
+ 3218 ?        00:00:00 sshd
+ 3517 ?        00:00:00 sshd
+ 3659 ?        00:00:00 sshd
+ 4157 ?        00:00:00 sshd
+ 4399 ?        00:00:00 sshd
+ 4419 ?        00:00:00 sshd
+ 4681 ?        00:00:00 sshd
+ 4761 ?        00:00:00 sshd
+ 4825 ?        00:00:00 sshd
+ 4877 ?        00:00:00 sshd
+ 4996 ?        00:00:00 sshd
+ 5475 ?        00:00:00 sshd
+ 5713 ?        00:00:01 sshd
+ 5802 ?        00:00:00 sshd
+ 6040 ?        00:00:00 sshd
+ 6428 ?        00:00:00 sshd
+ 6540 ?        00:00:00 sshd
+ 6667 ?        00:00:00 sshd
+ 6753 ?        00:00:00 sshd
+ 7444 ?        00:00:00 sshd
+ 7654 ?        00:00:00 sshd
+ 8337 ?        00:00:00 sshd
+ 8490 ?        00:00:00 sshd
+ 8642 ?        00:00:00 sshd
+ 8660 ?        00:00:00 sshd
+ 8695 ?        00:00:00 sshd
+ 8757 ?        00:00:00 sshd
+ 8764 ?        00:00:00 sshd
+ 8910 ?        00:00:00 sshd
+ 8951 ?        00:00:00 sshd
+ 9199 ?        00:00:00 sshd
+ 9286 ?        00:00:00 sshd
+ 9455 ?        00:00:00 sshd
+ 9500 ?        00:00:00 sshd
+ 9624 ?        00:00:00 sshd
+ 9653 ?        00:00:00 sshd
+ 9658 ?        00:00:00 sshd
+ 9737 ?        00:00:00 sshd
+ 9834 ?        00:00:00 sshd
+ 9928 ?        00:00:00 sshd
+10004 ?        00:00:00 sshd
+10054 ?        00:00:00 sshd
+10191 ?        00:00:00 sshd
+10510 ?        00:00:00 sshd
+10601 ?        00:00:00 sshd
+11152 ?        00:00:00 sshd
+11297 ?        00:00:00 sshd
+13784 ?        00:00:00 sshd
+13799 ?        00:00:00 sshd
+13912 ?        00:00:00 sshd
+14065 ?        00:00:00 sshd
+14444 ?        00:00:00 sshd
+14562 ?        00:00:00 sshd
+14757 ?        00:00:00 sshd
+14761 ?        00:00:00 sshd
+14882 ?        00:00:00 sshd
+14899 ?        00:00:00 sshd
+15950 ?        00:00:00 sshd
+16111 ?        00:00:00 sshd
+16225 ?        00:00:01 sshd
+16541 ?        00:00:01 sshd
+17049 ?        00:00:00 sshd
+17151 ?        00:00:00 sshd
+17188 ?        00:00:00 sshd
+17284 ?        00:00:10 sshd
+17345 ?        00:00:00 sshd
+17353 ?        00:00:00 sshd
+18082 ?        00:00:00 sshd
+18098 ?        00:00:00 sshd
+18156 ?        00:00:00 sshd
+18226 ?        00:00:00 sshd
+18772 ?        00:00:00 sshd
+18993 ?        00:00:00 sshd
+19227 ?        00:00:00 sshd
+19346 ?        00:00:00 sshd
+19903 ?        00:00:00 sshd
+20262 ?        00:00:00 sshd
+20328 ?        00:00:00 sshd
+20481 ?        00:00:00 sshd
+20642 ?        00:00:00 sshd
+20819 ?        00:00:00 sshd
+20975 ?        00:00:00 sshd
+21362 ?        00:00:00 sshd
+21365 ?        00:00:00 sshd
+21467 ?        00:00:00 sshd
+22011 ?        00:00:00 sshd
+22139 ?        00:00:00 sshd
+22571 ?        00:00:00 sshd
+22733 ?        00:00:00 sshd
+23092 ?        00:00:00 sshd
+23185 ?        00:00:00 sshd
+23209 ?        00:00:00 sshd
+23211 ?        00:00:00 sshd
+23414 ?        00:00:01 sshd
+23548 ?        00:00:00 sshd
+23611 ?        00:00:00 sshd
+23615 ?        00:00:00 sshd
+23682 ?        00:00:00 sshd
+23770 ?        00:00:00 sshd
+23802 ?        00:00:00 sshd
+23932 ?        00:00:00 sshd
+23986 ?        00:00:00 sshd
+24060 ?        00:00:00 sshd
+24104 ?        00:00:00 sshd
+24114 ?        00:00:00 sshd
+24118 ?        00:00:00 sshd
+24185 ?        00:00:00 sshd
+24525 ?        00:00:00 sshd
+24531 ?        00:00:00 sshd
+24651 ?        00:00:00 sshd
+24665 ?        00:01:05 sshd
+24722 ?        00:00:00 sshd
+24772 ?        00:00:00 sshd
+24808 ?        00:00:00 sshd
+25051 ?        00:00:00 sshd
+25053 ?        00:00:00 sshd
+25156 ?        00:00:00 sshd
+25172 ?        00:00:00 sshd
+25220 ?        00:00:05 sshd
+26734 ?        00:00:00 sshd
+26817 ?        00:00:01 sshd
+27173 ?        00:00:00 sshd
+27273 ?        00:00:00 sshd
+27346 ?        00:00:00 sshd
+27544 ?        00:00:00 sshd
+27570 ?        00:00:00 sshd
+27655 ?        00:00:02 sshd
+27868 ?        00:00:00 sshd
+28172 ?        00:00:00 sshd
+28206 ?        00:00:00 sshd
+28248 ?        00:00:00 sshd
+28376 ?        00:00:00 sshd
+28399 ?        00:00:00 sshd
+28449 ?        00:00:02 sshd
+28618 ?        00:00:00 sshd
+28755 ?        00:00:00 sshd
+28778 ?        00:00:00 sshd
+29140 ?        00:00:00 sshd
+29371 ?        00:00:00 sshd
+29491 ?        00:00:00 sshd
+29583 ?        00:00:00 sshd
+29613 ?        00:00:00 sshd
+29682 ?        00:00:00 sshd
+29709 ?        00:00:00 sshd
+29767 ?        00:00:00 sshd
+29950 ?        00:00:00 sshd
+30004 ?        00:00:00 sshd
+30005 ?        00:00:00 sshd
+30059 ?        00:00:00 sshd
+30061 ?        00:00:00 sshd
+30113 ?        00:00:00 sshd
+30115 ?        00:00:00 sshd
+30184 ?        00:00:00 sshd
+30869 ?        00:00:00 sshd
+31006 ?        00:00:00 sshd
+31045 ?        00:00:00 sshd
+31085 ?        00:00:00 sshd
+31096 ?        00:00:00 sshd
+31290 ?        00:00:00 sshd
+31557 ?        00:00:00 sshd
+31610 ?        00:00:00 sshd
+31686 ?        00:00:00 sshd
+31870 ?        00:00:00 sshd
+32249 ?        00:00:00 sshd
+32474 ?        00:00:00 sshd
+32507 ?        00:00:00 sshd
+32541 ?        00:00:06 sshd
+32702 ?        00:00:00 sshd
+% ps -A | grep sshd | wc -l
+187
+% setenv XXX 123
+% printenv | grep XXX
+XXX=123
+% 
+% echo "*** ERRONEOUS COMMANDS"
+*** ERRONEOUS COMMANDS
+% echo 'one"
+% echo one"
+% echo "one'
+% nosuchcommand
+% cd nosuchdir
+% setenv
+% unsetenv
+% cat .bashrc | | grep export
+% 
+% echo "*** MULTIPLE REDIRECTION ERRORS"
+*** MULTIPLE REDIRECTION ERRORS
+% cat .ishrc > /tmp/no1 > /tmp/no2
+% grep "echo" < .ishrc < .ishrc
+% cat .ishrc | grep "echo" < .ishrc
+% cat .ishrc > /tmp/no | grep "echo"
+% 

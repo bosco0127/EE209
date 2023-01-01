@@ -1,0 +1,34 @@
+ 공현덕 20200029
+ I have done this assignment by myself.
+ It is impossible for StrCopy to call assert to verify that the destination
+memory area specified by the caller is large enough.
+Even if the StrCopy met the end of memory of destination, StrCopy may store rest
+of the string to the next memory which address is right next to the end of destination.
+For example, if another array is declared right after the destination array, the StrCopy
+may store last of the string into that array. Therefore, it is not possible for
+StrCopy to call assert to verify that the destination memory area is large enough.
+ I used pointer notation for the extra credit.
+ I spent 16 hours for Part1 and 8 hours for Part2. Actually I spent most of the time
+to fix the bug(I guess it is about 85% of total time).
+ The assignment2 was good to check how the string functions work. I could learn much
+about pointer and pointer of pointer by doing Part1 & Part2.
+Also, it was the first time that I doing something on the paper first, and then
+type the code. It was surely faster and more convenient in terms of designning logic
+and finding bugs.
+ I did not use recursive function for the Part2. Actually, It was came to my mind first
+that not using recursive function. My logic was finding subpattern in order. So, I made
+the function to get subpattern which name is GetSubPat, and use StrFindStr function to
+find the subpattern in the string. After find the subpattern, get next subpattern and
+change the address of starting point of the string right next to the end of the address
+at which previous subpattern was found. In this process, I did not feel the need of
+using recursive function. Actually, I felt that it would be more difficult.
+ The hardest bug to find was occured at loop condition statement. In this case, the file
+complied successfully by using gcc209, but when we executed the file, it generates
+segmentation fault with core dumped. Most of the probelm was confuse (pointer == NULL)
+and (*pointer == '\0'). When I type wrong case, even if the *pointer == '\0', the
+pointer does not points to NULL address so loop goes forever and opposite case cause
+the same problem.
+The most annoying bug was that I did not initialized the length of subpattern at
+sgrep when the program starts to search for the next string.
+In this case, program executed very well but missed some lines that contains the pattern.
+So, it was hard to find the reason.

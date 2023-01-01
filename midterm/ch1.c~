@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+/* Casting Example */
+void Cast(void) {
+  printf("0==0U ? :%d\n",(0==0U));
+  printf("-1<0 ? :%d\n",(-1<0));
+  printf("-1>0U ? :%d\n",(-1>0U));
+  printf("(unsigned int)-3>-2 ? :%d\n",((unsigned int)-3>-2));
+  printf("2147483647>(int) 2147483648U ? :%d\n",(2147483647>(int) 2147483648U));
+}
+
+int main(void) {
+  Cast();
+}

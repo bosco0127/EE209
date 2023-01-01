@@ -1,0 +1,33 @@
+ 20200029 공현덕
+ I do this homework with myself, and get help from lecture note 6 & 10.
+ Using array, it is like putting items together in one box in the order
+they've come. Therefore, it can reduce memory space. However, if we want
+to do something with the particular item, we have to find it in order from 
+beginning to end. Therefore, it takes a lot of time.
+Using hash table, it is like putting items in the labeled boxes with a 
+corresponding name tag. Therefore, it requires much larger memory space 
+because it needsa lot of boxes. However, if we want to do something with
+the particular item, it is much easier to find because of label. Therefore,
+it can reduce time.
+ I implemented hash table expansion at RegisterCustomer in customer_manager2.c.
+ I spent about 24 hours to finish this homework(8 hours for 1st and last
+day, about 4 hours for 2nd and 3rd day).
+ After finish this homework, I have performance test 3 versions(array ver.,
+not-expanding-hash-table ver., expanding-hash-table ver.) with 1 million
+items. As a result, expanding-hash-table ver. was the fastest, followed by
+not-expanding-hash-table ver. and array ver., also the gap between them was
+very huge.
+Through this test, I could feel that saving time is much more better than
+saving memory space, because array ver. takes more than 10 minutes and not-
+expanding-hash-table version takes about a minute while expanding-hash-table
+version takes only about 400ms. Actually, I stopped array ver. because it
+took too long.
+ The hardest bug to find was occured at RegisterCustomer in customer_manager1.c.
+At first, I forgot that it makes Segmentation fault when the NULL value is
+put in strcmp function. I did not pass these cases at first, and struggled
+with this problem about 4 hours to find a problem. I recognized this problem
+while using gdb.
+ I implement hash table expansion with pointer of pointer. If we use pointer
+array, we cannot change the first size of the hash table array. So, I implement
+this by using pointer of pointer and allocate memory which each size was
+amount of (struct UserInfo *) so that I can use it like a hash table array.

@@ -1,0 +1,15 @@
+ 공현덕, 20200029, assignment #1.
+ I do assign1 myself referring to the lecture notes, textbook(C Programming A Modern Approach 2nd ed, K.N.King), and lecture notes of EE485 class.
+ I spent about 1 and half hours to design DFA, about 12 hours to create source codeand fix the mistakes, and about 2 hours to write comments.
+ This assignment helps me familiar with emacs editor. At first, I did not know much about emacs reference, and it makes me spent a lot of time.
+But, after i memorized some macros, i could reduce much time to create the code. Also, i could learn the operation of getchar function, switch case, 
+and continue commands by fixing mistakes.
+ I spent most of the time to fix the mistakes when it occurs at the success state. At first, I put getchar function at the condition expression of while.
+The program has to get character twice to detect command symbol('/'+'*') and confirm it by using if statement. However, if the character right next to the slash
+is not '*', then the program has cannot detect the case like "...//*...." because c has to print the two characters, "//", and then gets the next character, '*'.
+Therefore, the program does not recognize comment symbol right next to the slash.
+So, I decided to change the location of the getchar function into the end of each case so that program can recognize the comment symbol like above case.
+ Also, I spent quite much time to find special function to read file. I did not know how to read file like that format(./decomment <somefile.c> output 2> errors),
+so I searched for almost an hour and found "int main(int argc, char *argv[])". But it seems very difficult and I felt that this is wrong way. So, I decided to have
+a test the getchar function whether it could read the file by writing the example code in lecture note 3. Then, I found that getchar function could read the file.
+These are the big two things that I learned while doing this homework.
